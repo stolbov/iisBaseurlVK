@@ -1,0 +1,39 @@
+{
+  "name": "iis-baseurl",
+  "version": "0.0.1",
+  "description": "Cut off IIS virtual path (base url) from the request url when running via IISNODE with URL Rewrite",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/burmisov/iis-baseurl"
+  },
+  "keywords": [
+    "iis",
+    "iisnode",
+    "base",
+    "url",
+    "baseurl",
+    "virtual",
+    "path"
+  ],
+  "author": {
+    "name": "Sergey Burmisov",
+    "url": "http://github.com/burmisov"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/burmisov/iis-baseurl/issues"
+  },
+  "readme": "iis-baseurl\r\n===========\r\n\r\nCut off IIS virtual path (base url) from the request url when running via IISNODE with URL Rewrite\r\n\r\nAdd \"APPL_MD_PATH\" to \"promoteServerVars\" iisnode attribute in web.config!!\r\n\r\nThen use like this:\r\n```\r\nvar express = require('express');\r\nvar iisBaseUrl = require('iis-baseurl');\r\n\r\nvar app = express();\r\n\r\napp.use(iisBaseUrl());\r\n\r\napp.listen(process.env.PORT || 3000);\r\n```\r\n\r\nIt works seamlessly wether on dev machine or off IIS virtual path or app.\r\n",
+  "readmeFilename": "README.md",
+  "homepage": "https://github.com/burmisov/iis-baseurl",
+  "_id": "iis-baseurl@0.0.1",
+  "dist": {
+    "shasum": "c988fd87e4b24e75012673a72f8887c6a2d26443"
+  },
+  "_from": "iis-baseurl@*",
+  "_resolved": "https://registry.npmjs.org/iis-baseurl/-/iis-baseurl-0.0.1.tgz"
+}
